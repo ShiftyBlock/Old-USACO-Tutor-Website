@@ -1,3 +1,5 @@
+Options -MultiViews
+
 RewriteEngine On
 
 RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
