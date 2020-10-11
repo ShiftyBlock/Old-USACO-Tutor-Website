@@ -2457,18 +2457,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-color: #235ee7;
 }
 
-@media (max-width: 1366px) {
-  .home-about-area .home-about-right {
-    padding-right: 5%;
-    padding-left: 4%;
-  }
-}
-
-@media (max-width: 800px) {
-  .home-about-area .home-about-right {
-    margin-top: 40px;
-  }
-}
 
 .service-area .header-text {
   text-align: center;
