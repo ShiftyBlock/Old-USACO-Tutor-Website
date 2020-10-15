@@ -196,163 +196,98 @@
 			<!-- Start Generic Area -->
 			
 			<!-- End Generic Start -->		
+<div id="smart-button-container">
+      <div style="text-align: center;">
+        <div style="margin-bottom: 1.25rem;">
+          <p>USACO Bronze Class</p>
+          <select id="item-options"><option value=" Bronze" price="375"> Bronze - 375 USD</option></select>
+          <select style="visibility: hidden" id="quantitySelect"></select>
+        </div>
+      <div id="paypal-button-container"></div>
+      </div>
+    </div>
+    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD" data-sdk-integration-source="button-factory"></script>
+    <script>
+      function initPayPalButton() {
+        var shipping = 0;
+        var itemOptions = document.querySelector("#smart-button-container #item-options");
+    var quantity = parseInt();
+    var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+    if (!isNaN(quantity)) {
+      quantitySelect.style.visibility = "visible";
+    }
+    var orderDescription = 'USACO Bronze Class';
+    if(orderDescription === '') {
+      orderDescription = 'Item';
+    }
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal',
+        
+      },
+      createOrder: function(data, actions) {
+        var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+        var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+        var tax = (0 === 0) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+        if(quantitySelect.options.length > 0) {
+          quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+        } else {
+          quantity = 1;
+        }
 
-<!-- About Generic Start -->
-		<div class="main-wrapper">
-			
-			<!-- Start unique-feature Area -->
-			<section class="unique-feature-area section-gap" id="unique">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-10">
-							<div class="title text-center">
-								<h1 class="mb-10 text-white">Sessions</h1>
-								<p>90 Minutes of Engaging Classes</p>
-								<a href="https://paypal.me/shiftyblock/375" style="position: center;">
-								<button class="Schedule_button__1DP8M">
-								Enroll</button>	
-								</a>
-							</div>
-						</div>
-					</div>						
-					<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										0
-									</h4>
-									<h6>Set up Environment, Compiler, Basics</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										1
-									</h4>
-									<h6>Variables, Data Types,  Arithmetic</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										2
-									</h4>
-									<h6>Conditionals, Strings, Logic Gates</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										3
-									</h4>
-									<h6>For, While, Do-While loops, File IO</h6>
-								</div>
-							</div>
-						</div>																		
-					</div>
-					<div class="row">
-		
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										4
-									</h4>
-									<h6>Arrays, Vectors, Global Variables</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										5
-									</h4>
-									<h6>Sorting, Binary Search</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										6
-									</h4>
-									<h6>2 Pointers(Silver Technique!), Quiz</h6>
-								</div>
-							</div>
-						</div>	
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										7
-									</h4>
-									<h6>Debugging & Tracing, Methods</h6>
-								</div>
-							</div>
-						</div>																	
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										8
-									</h4>
-									<h6>Intuition-Based Problems, Ad-hoc</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										9
-									</h4>
-									<h6>Simulation-Based Problems</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										10
-									</h4>
-									<h6>String-Based Problems</h6>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6">
-							<div class="single-unique-product">
-								<div class="desc">
-									<h4>
-										11
-									</h4>
-									<h6>Final Exam (4 hours)</h6>
-								</div> 
-							</div>
-						</div>																		
-					</div>		
-					
-				</div>		
+        tax *= quantity;
+        tax = Math.round(tax * 100) / 100;
+        var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+        priceTotal = Math.round(priceTotal * 100) / 100;
+        var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
 
-			</div>
-
-								
-			
-
-		
- 
-			</section>
+        return actions.order.create({
+          purchase_units: [{
+            description: orderDescription,
+            amount: {
+              currency_code: 'USD',
+              value: priceTotal,
+              breakdown: {
+                item_total: {
+                  currency_code: 'USD',
+                  value: itemTotalValue,
+                },
+                shipping: {
+                  currency_code: 'USD',
+                  value: shipping,
+                },
+                tax_total: {
+                  currency_code: 'USD',
+                  value: tax,
+                }
+              }
+            },
+            items: [{
+              name: selectedItemDescription,
+              unit_amount: {
+                currency_code: 'USD',
+                value: selectedItemPrice,
+              },
+              quantity: quantity
+            }]
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+          alert('Transaction completed by ' + details.payer.name.given_name + '!');
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      },
+    }).render('#paypal-button-container');
+  }
+  initPayPalButton();
+    </script>
 			
 			<!-- start footer Area -->		
 			<footer class="footer-area section-gap">
