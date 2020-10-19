@@ -14,8 +14,11 @@
 }
 .spoiler {overflow:hidden;}
 .spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}
-.spoilerbutton[value="Show Solution"] + .spoiler > div {margin-top:-500%;}
-.spoilerbutton[value="Hide SolutionSolution"] + .spoiler {padding:5px;} 
+.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-500%;}
+.spoilerbutton[value="Hide"] + .spoiler {padding:5px;} 
+.button1{width:120px;padding:8px 0;text-decoration:none;font-size:16px;font-weight:700;color:#1486e7;background:#fff;border:1px solid #d8ebfb;border-radius:6px;transition:color .3s,background .3s,border-color .3s,transform .3s}
+.button1:active,.button1:hover{color:#fff;background:#1486e7;border-color:#1486e7;cursor: pointer;}
+.button1:active{transform:translateY(2px)}
 
 }
 
@@ -138,8 +141,8 @@
                         <p>October 18, 2020</p>
                        <p>Okay, official "TMW Training", or more formally, "Torture Training". Day 1.</p>
                        <p> Firstly, for the fun part: here's my new desktop :)</p>
-                       <img src="/blog/folklore/william.jpeg" alt="William Lin" width="990" height="600">
-                        <input class="spoilerbutton" type="button" value="Show Solution" onclick="this.value=this.value=='Show Solution'?'Hide Solution':'Show Solution';">
+                    
+                        <button class="spoilerbutton button1"  value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';"></button>
                         <div class="spoiler"><div>
 
                         <p>adfasdf  </p>
@@ -147,9 +150,10 @@
 
                     
 
-                        <img style=" margin: 30px auto; display: block;" height="Auto" width = "Auto" src="/blog/folklore/william.jpeg">
+                        <img style=" margin: 30px auto; display: block;" height="990" width = "600" src="/blog/folklore/william.jpeg">
 
-                        </div></div>
+                        </div>
+                    </div>
                     </div>
 
                     <h3 class="title"></h3>
