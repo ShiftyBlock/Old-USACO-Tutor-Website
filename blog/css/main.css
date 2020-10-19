@@ -224,35 +224,6 @@ section p {
     margin-top: 10px;
     max-width: 100%;
 }
-.spoiler .spoiler-title {
-    font-weight: normal;
-    border-bottom: 1px dashed;
-    cursor: pointer;
-}
-
-.spoiler:before {
-    width: 16px;
-    height: 16px;
-    content: " ";
-    float: left;
-    display: block;
-    background: url("/img/control.png") no-repeat;
-
-}
-
-.spoiler.spoiler-open:before {
-    background: url("/img/control-270.png") left bottom no-repeat;
-}
-
-.spoiler-content {
-    border: 1px solid gray;
-    background-color: #def;
-    border-radius: 5px;
-    padding: 5px;
-    margin-top: 5px;
-}
-
-
 
 
 
