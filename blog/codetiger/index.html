@@ -9,22 +9,14 @@
           scroll-behavior: smooth;
 
     }
-    .dropdown {
-  position: relative;
-  display: inline-block;
+   
+.spoilerbutton {display:block; border:none; padding: 0px 0px; margin:10px 0px; font-size:150%; font-weight: bold; color:#000000; background-color:transparent; outline:0; 
 }
+.spoiler {overflow:hidden;}
+.spoiler > div {-webkit-transition: all 0s ease;-moz-transition: margin 0s ease;-o-transition: all 0s ease;transition: margin 0s ease;}
+.spoilerbutton[value="Show Solution"] + .spoiler > div {margin-top:-500%;}
+.spoilerbutton[value="Hide SolutionSolution"] + .spoiler {padding:5px;} 
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown:click .dropdown-content {
-  display: block;
 }
 
 </style>
@@ -147,7 +139,17 @@
                        <p>Okay, official "TMW Training", or more formally, "Torture Training". Day 1.</p>
                        <p> Firstly, for the fun part: here's my new desktop :)</p>
                        <img src="/blog/folklore/william.jpeg" alt="William Lin" width="990" height="600">
+                        <input class="spoilerbutton" type="button" value="Show Solution" onclick="this.value=this.value=='Show Solution'?'Hide Solution':'Show Solution';">
+                        <div class="spoiler"><div>
 
+                        <p>adfasdf  </p>
+                        <p> adfadsf </p>
+
+                    
+
+                        <img style=" margin: 30px auto; display: block;" height="Auto" width = "Auto" src="/blog/folklore/william.jpeg">
+
+                        </div></div>
                     </div>
 
                     <h3 class="title"></h3>
