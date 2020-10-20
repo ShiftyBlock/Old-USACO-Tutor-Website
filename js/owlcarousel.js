@@ -2,7 +2,6 @@
  *   Name: Cow Disguise
  * Description: A fake client side password protection
  * Version: 0.0.0
- * URI: https://cow-disguise.anth.dev
  * Author: Anthony Kung
  * Author URI: https://anth.dev
  * Copyright: 2020 Anthony Kung
