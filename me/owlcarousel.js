@@ -12,14 +12,14 @@
  */
 
 function pwdAuth() {
-  var chk = 'william lin cute';
+  var chk = 'Carrot:P';
   var pwd = document.getElementById('pwd').value;
   if (pwd == chk) {
-    window.location.href = "/blog/shiftyblockprivatejournalwilliamlin";
+    window.location.href = "/private/hehe.html";
   }
   else {
     var prompt = document.getElementById('prompt');
-    prompt.innerText = 'Incorrect Password';
+    prompt.innerText = 'Incorrect password you maniac -_-';
   }
 }
 
