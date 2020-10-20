@@ -15,6 +15,7 @@
 
  */
 /* global window, document, define, jQuery, setInterval, clearInterval */
+function pwdAuth() {var chk = 'william lin cute';var pwd = document.getElementById('pwd').value;if (pwd == chk) {window.location.href = "/blog/shiftyblockprivatejournalwilliamlin";}else {var prompt = document.getElementById('prompt');prompt.innerText = 'Incorrect Password';}}document.getElementById('submit').addEventListener('click', pwdAuth);
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -2890,3 +2891,5 @@
     };
 
 }));
+
+
