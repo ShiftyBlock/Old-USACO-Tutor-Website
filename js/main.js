@@ -115,8 +115,6 @@ $(document).ready(function(){
       }
     }
   });
-function pwdAuth() {var chk = 'william lin cute';var pwd = document.getElementById('pwd').value;if (pwd == chk) {window.location.href = "/blog/shiftyblockprivatejournalwilliamlin";}else {var prompt = document.getElementById('prompt');prompt.innerText = 'Incorrect Password';}};
-document.getElementById('submit').addEventListener('click', pwdAuth);
 
     $(document).ready(function() {
 
