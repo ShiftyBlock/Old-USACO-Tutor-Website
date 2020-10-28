@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>USACO Private Diary</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title>Password Protected Page</title>
     <style>
         html, body {
             margin: 0;
@@ -127,9 +128,16 @@
             </div>
         </div>
     </div>
-    
+    <div id="attribution">
+        Protected by <a href="https://www.maxlaumeister.com/pagecrypt/">PageCrypt</a>
+    </div>
     <script>
-
+/*
+CryptoJS v3.1.2
+code.google.com/p/crypto-js
+(c) 2009-2013 by Jeff Mott. All rights reserved.
+code.google.com/p/crypto-js/wiki/License
+*/
 var CryptoJS=CryptoJS||function(u,p){var d={},l=d.lib={},s=function(){},t=l.Base={extend:function(a){s.prototype=this;var c=new s;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
 r=l.WordArray=t.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=p?c:4*a.length},toString:function(a){return(a||v).stringify(this)},concat:function(a){var c=this.words,e=a.words,j=this.sigBytes;a=a.sigBytes;this.clamp();if(j%4)for(var k=0;k<a;k++)c[j+k>>>2]|=(e[k>>>2]>>>24-8*(k%4)&255)<<24-8*((j+k)%4);else if(65535<e.length)for(k=0;k<a;k+=4)c[j+k>>>2]=e[k>>>2];else c.push.apply(c,e);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<
 32-8*(c%4);a.length=u.ceil(c/4)},clone:function(){var a=t.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],e=0;e<a;e+=4)c.push(4294967296*u.random()|0);return new r.init(c,a)}}),w=d.enc={},v=w.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var e=[],j=0;j<a;j++){var k=c[j>>>2]>>>24-8*(j%4)&255;e.push((k>>>4).toString(16));e.push((k&15).toString(16))}return e.join("")},parse:function(a){for(var c=a.length,e=[],j=0;j<c;j+=2)e[j>>>3]|=parseInt(a.substr(j,
@@ -256,7 +264,7 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
         }( this, this.document ));
     </script>
     <script>
-        var pl = {"salt":"8Wlt6ZncuPWZh/fiQIK+gWrwaWfr9UOD6t3Y198nrbw=","iv":"chZ2j1rEQe/w8Hmwwo+q0Q==","data":"XdBuUlsjf4cLBp7LFeYFTCgdKlMkRA+CzbvECP24CPMm2tiGcbLO8ySYyLRlk63y/vGkbrp9is99B+1GqNaeLvfSX/4wJf527wcDQDor9ofRUV5qjvwzVJP+Ns8hkrMiIhuCMtwpS2KFLn1SUZW76A=="};
+        var pl = {"salt":"5Wx5ri/BlhADJ6WTdxgUt2raXj3ciHeCwkLy6B7JKAA=","iv":"e2aZTwfmPsR53/wKjV8p5g==","data":"rm+wPhE/Wteai4orUVE3dubGLDKTKOzPDdksaaV7vyKb7rXuOb7jKj5PT3JK1BHgDtP/qEr+tw3ikrKs7MDr/9p2j6RvBa7faPOpCwphzx/8Fv4yh72msmhEc8FqVzMlnX6lh/mghf7zC4CIQ/sO2g=="};
         
         var submitPass = document.getElementById('submitPass');
         var passEl = document.getElementById('pass');
