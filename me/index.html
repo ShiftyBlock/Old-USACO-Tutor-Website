@@ -2,15 +2,10 @@
 <html class="staticrypt-html">
 <head>
     <meta charset="utf-8">
-    <title>Password Protected Page</title>
+    <title>Private Pet Cow 😳</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- do not cache this page -->
-    <meta http-equiv="cache-control" content="max-age=0"/>
-    <meta http-equiv="cache-control" content="no-cache"/>
-    <meta http-equiv="expires" content="0"/>
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
-    <meta http-equiv="pragma" content="no-cache"/>
+    
 
     <style>
         .staticrypt-hr {
@@ -117,12 +112,10 @@
 <div class="staticrypt-page">
     <div class="staticrypt-form">
         <div class="staticrypt-instructions">
-            <p class="staticrypt-title">Password Protected Page</p>
-            <p><p>Password:</p>
+            <p class="staticrypt-title">Private Blog</p>
+            <p><p>This blog is private. It is written by me, David Yang.&nbsp;</p>
 
-<p>WilliamLinSucks2020(but also kind of cute)</p>
-
-<p>&nbsp;</p>
+<p>Only a few people know the password. William Lin must not have access to this 😳</p>
 </p>
         </div>
 
@@ -6167,7 +6160,7 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = 'ba041e886bdb4fe1f0800382bd6acadc1fac05af825c29bcc614fc6c18f06f6f95920b8c9563e25ecda480e6319a875ad0c8538da904a052b912fd634388079dt4Df986y7/hhaCODdWRtj400xcWmkJ5YyFJcl+uGMMQalX90S3YEs290QZAzCKqiAjA+ENHiTHWAFVQn+d9EMoa78yQM47+uzaj2O1hTGwbCMMkagUegFY74AjR4Mdo3dga8V9G9rNevWOld0asUy+TfLOR/rK3I/pADaH5bVZaAyAlPqt38IBq8O7S7ggleSr13e1IXa4KyHw7lLekw6iAMwhuubckz9OXfw4fZyOCowetWip7sHlXRKkaDeiXJtK6T7tH4SjJh/YMpAgkvBXDGAnEn1Nj6OiduFmfsIsWkBjeeIligIi2KIBXJWgn1HiHbmGdOpDVVA8r0RrobUbPimMjtSg+Fg+VkYVJThyPL8mZrzXxUozEeQNE8zy+bsp7vRiuHFb4xvO5V9O75ELETdYI4iunIgeVJYIeOBWk=',
+            encryptedMsg = 'c4ad5b6017fa23efa0496b2f277526663b270eb262f9ea040a488d2bee437a6d70e2ea32b3ecf54c414b6f5b49cd87135e73eb5a2f982420362ac90656ed835fp2617zcCreVifYFsWRMnqRKxxulZQLil+y/2p0KoRQ2iKn9/YbBjVZFcrDYHi6OiTpUbzEhgPHRQvop+xNzHl9x0h5Q8wCIq78leVtaN7fjW17N1H8d3cltjGfDdMewCV8nLvNC28jCFGHYPQEkU1g==',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
