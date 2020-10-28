@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Password Protected Diary</title>
+    <title>USACO Private Diary</title>
     <style>
         html, body {
             margin: 0;
@@ -127,16 +127,9 @@
             </div>
         </div>
     </div>
-    <div id="attribution">
-        Protected by <a href="https://usacotutor.com">USACO Tutor</a>
-    </div>
+    
     <script>
-/*
-CryptoJS v3.1.2
-code.google.com/p/crypto-js
-(c) 2009-2013 by Jeff Mott. All rights reserved.
-code.google.com/p/crypto-js/wiki/License
-*/
+
 var CryptoJS=CryptoJS||function(u,p){var d={},l=d.lib={},s=function(){},t=l.Base={extend:function(a){s.prototype=this;var c=new s;a&&c.mixIn(a);c.hasOwnProperty("init")||(c.init=function(){c.$super.init.apply(this,arguments)});c.init.prototype=c;c.$super=this;return c},create:function(){var a=this.extend();a.init.apply(a,arguments);return a},init:function(){},mixIn:function(a){for(var c in a)a.hasOwnProperty(c)&&(this[c]=a[c]);a.hasOwnProperty("toString")&&(this.toString=a.toString)},clone:function(){return this.init.prototype.extend(this)}},
 r=l.WordArray=t.extend({init:function(a,c){a=this.words=a||[];this.sigBytes=c!=p?c:4*a.length},toString:function(a){return(a||v).stringify(this)},concat:function(a){var c=this.words,e=a.words,j=this.sigBytes;a=a.sigBytes;this.clamp();if(j%4)for(var k=0;k<a;k++)c[j+k>>>2]|=(e[k>>>2]>>>24-8*(k%4)&255)<<24-8*((j+k)%4);else if(65535<e.length)for(k=0;k<a;k+=4)c[j+k>>>2]=e[k>>>2];else c.push.apply(c,e);this.sigBytes+=a;return this},clamp:function(){var a=this.words,c=this.sigBytes;a[c>>>2]&=4294967295<<
 32-8*(c%4);a.length=u.ceil(c/4)},clone:function(){var a=t.clone.call(this);a.words=this.words.slice(0);return a},random:function(a){for(var c=[],e=0;e<a;e+=4)c.push(4294967296*u.random()|0);return new r.init(c,a)}}),w=d.enc={},v=w.Hex={stringify:function(a){var c=a.words;a=a.sigBytes;for(var e=[],j=0;j<a;j++){var k=c[j>>>2]>>>24-8*(j%4)&255;e.push((k>>>4).toString(16));e.push((k&15).toString(16))}return e.join("")},parse:function(a){for(var c=a.length,e=[],j=0;j<c;j+=2)e[j>>>3]|=parseInt(a.substr(j,
@@ -263,7 +256,7 @@ a[0]++}h.sigBytes=4*c;return h}});g.PBKDF2=function(d,b,e){return n.create(e).co
         }( this, this.document ));
     </script>
     <script>
-        var pl = {"salt":"Hi9AsikVoUrU9Y/HKvn/rjOeM5urkHdlak755Ji4arI=","iv":"xlmQaZruP4jVO7ETIfzU3A==","data":"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"};
+        var pl = {"salt":"8Wlt6ZncuPWZh/fiQIK+gWrwaWfr9UOD6t3Y198nrbw=","iv":"chZ2j1rEQe/w8Hmwwo+q0Q==","data":"XdBuUlsjf4cLBp7LFeYFTCgdKlMkRA+CzbvECP24CPMm2tiGcbLO8ySYyLRlk63y/vGkbrp9is99B+1GqNaeLvfSX/4wJf527wcDQDor9ofRUV5qjvwzVJP+Ns8hkrMiIhuCMtwpS2KFLn1SUZW76A=="};
         
         var submitPass = document.getElementById('submitPass');
         var passEl = document.getElementById('pass');
