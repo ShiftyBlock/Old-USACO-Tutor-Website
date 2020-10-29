@@ -4,8 +4,28 @@
 
 @font-face {
     font-family: 'trial_phantom_sans_0.8regular';
-    src: url('trial_phantomsans0.8-regular-webfont.woff2') format('woff2'),
-         url('trial_phantomsans0.8-regular-webfont.woff') format('woff');
+    src: url('/css/fonts/trial_phantomsans0.8-regular-webfont.woff2') format('woff2'),
+         url('/css/fonts/trial_phantomsans0.8-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'trial_phantom_sans_0.8SBdIt';
+    src: url('/css/fonts/trial_phantomsans0.8-sembolditalic-webfont.woff2') format('woff2'),
+         url('/css/fonts/trial_phantomsans0.8-sembolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'trial_phantom_sans_0.8SBd';
+    src: url('/css/fonts/trial_phantomsans0.8-semibold-webfont.woff2') format('woff2'),
+         url('/css/fonts/trial_phantomsans0.8-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
