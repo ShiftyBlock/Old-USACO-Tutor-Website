@@ -36,8 +36,8 @@
 
 @font-face {
     font-family: 'proxima_novabold';
-    src: url('proximanova-bold-03-webfont.woff2') format('woff2'),
-         url('proximanova-bold-03-webfont.woff') format('woff');
+    src: url('/css/fonts/proximanova-bold-03-webfont.woff2') format('woff2'),
+         url('/css/fonts/proximanova-bold-03-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -48,8 +48,8 @@
 
 @font-face {
     font-family: 'proxima_novaregular';
-    src: url('proximanova-regular-01-webfont.woff2') format('woff2'),
-         url('proximanova-regular-01-webfont.woff') format('woff');
+    src: url('/css/fonts/proximanova-regular-01-webfont.woff2') format('woff2'),
+         url('/css/fonts/proximanova-regular-01-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -60,8 +60,8 @@
 
 @font-face {
     font-family: 'proxima_novaitalic';
-    src: url('proximanova-regularit-02-webfont.woff2') format('woff2'),
-         url('proximanova-regularit-02-webfont.woff') format('woff');
+    src: url('/css/fonts/proximanova-regularit-02-webfont.woff2') format('woff2'),
+         url('/css/fonts/proximanova-regularit-02-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
