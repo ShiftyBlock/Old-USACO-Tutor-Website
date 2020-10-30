@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>Private Pet Cow 😳</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon">
+    <link rel="icon" href="/img/logo.png" type="image/x-icon">
 
     
 
@@ -115,7 +117,7 @@
             <p class="staticrypt-title">Private Journal</p>
             <p>
 
-<p>You don't NEED anyone.</p>
+<p>You don't need anyone.</p>
 </p>
         </div>
 
@@ -6160,7 +6162,7 @@
         e.preventDefault();
 
         var passphrase = document.getElementById('staticrypt-password').value,
-            encryptedMsg = 'c4ad5b6017fa23efa0496b2f277526663b270eb262f9ea040a488d2bee437a6d70e2ea32b3ecf54c414b6f5b49cd87135e73eb5a2f982420362ac90656ed835fp2617zcCreVifYFsWRMnqRKxxulZQLil+y/2p0KoRQ2iKn9/YbBjVZFcrDYHi6OiTpUbzEhgPHRQvop+xNzHl9x0h5Q8wCIq78leVtaN7fjW17N1H8d3cltjGfDdMewCV8nLvNC28jCFGHYPQEkU1g==',
+            encryptedMsg = '3c11bdc8d5a6e0e75caf20159d0ecb86b6c13e345d6ccc89de3db3fe34038ded53c924b555726e63a5cd1ff237c085109ed2af079f14131c66649f43cf352da77BH3JZahjl/G1F1+ZW5NsYVyqgERvZDzpBRNDK2xzHSnFV+wsrx6Ae514R5+58XDfKn35wS29i5Zy9kcx6BWIMT6M3sJItfRfnLL5LbH5HC11fZSlp+HVVuVjqWTouwGnQ9qGOU49EoQdNRuvq7IgLmgTyScZ7Culm5xRKJrrnQ=',
             encryptedHMAC = encryptedMsg.substring(0, 64),
             encryptedHTML = encryptedMsg.substring(64),
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
