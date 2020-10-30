@@ -7,7 +7,12 @@ body{
 	color:#777;
 }
 
-
+p{
+    color:#595959;
+}
+li{
+    color: #595959;
+}
 
 a {
     color: #aa0a5f;
